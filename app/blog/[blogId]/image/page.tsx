@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const BlogImagePage = ({params}: { params: { blogId: string } }) => {
+const BlogImagePage = ({params}: { params: { blogId: number } }) => {
     const imageUrl = `https://picsum.photos/970`;
 
     return (
