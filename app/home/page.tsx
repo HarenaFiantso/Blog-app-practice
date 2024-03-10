@@ -1,18 +1,19 @@
 import Link from "next/link";
+import {blogs} from "@/app/datas/BlogList";
 
-export default function HomePage() {
-    const blogs: string[] = ['Blog-1', 'Blog-2', 'Blog-3']
-
+const HomePage = () => {
     return (
-        <div className="h-screen flex items-center flex-col gap-5 justify-center text-center">
-            <h1 className="font-bold text-2xl">Home</h1>
+        <div>
+            <h1>Home</h1>
             <ul>
-                {blogs.map((blog, index) => (
-                    <li key={index}>
-                        <Link href={`/blog/${index + 1}`} className="mb-8 hover:underline">{blog}</Link>
+                {blogs.map((blog) => (
+                    <li key={blog.id}>
+                        <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
                     </li>
                 ))}
             </ul>
         </div>
     );
 }
+
+export default HomePage;

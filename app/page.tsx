@@ -3,12 +3,14 @@
 import {useRouter} from "next/navigation";
 import {useEffect} from "react";
 
-export default function Home() {
+const Home = () => {
     const router = useRouter();
 
     useEffect(() => {
         router.push('/home')
-    }, [router])
+    }, [router]);
 
-    return null
+    return router;
 }
+
+export default Home;
