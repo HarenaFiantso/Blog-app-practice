@@ -4,16 +4,9 @@ import {blogs} from "@/app/datas/BlogList";
 
 const BlogPage = ({params}: { params: { blogId: string } }) => {
     return (
-        <div>
-            <h1>Blog-{params.blogId}</h1>
-            <Link href={`/blog/${params.blogId}/image`}>See image</Link>
-            <ul>
-                {blogs.map((blog) => (
-                    <li key={blog.id}>
-                        <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
-                    </li>
-                ))}
-            </ul>
+        <div className="flex items-center justify-center flex-col">
+            <h1 className="mb-3 font-bold text-2xl">You clicked the Blog number {params.blogId}</h1>
+            <Link href={`/blog/${params.blogId}/image`} className="hover:underline mb-8">See image</Link>
         </div>
     );
 }
