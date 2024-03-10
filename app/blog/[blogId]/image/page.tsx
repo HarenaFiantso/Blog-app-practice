@@ -1,7 +1,12 @@
 import Image from "next/image";
+import {notFound} from "next/navigation";
 
-const BlogImagePage = ({params}: { params: { blogId: number } }) => {
+const BlogImagePage = ({params}: { params: { blogId: string } }) => {
     const imageUrl = `https://picsum.photos/970`;
+
+    if (parseInt(params.blogId) > 10) {
+        notFound();
+    }
 
     return (
         <div className="flex items-center justify-center flex-col">
