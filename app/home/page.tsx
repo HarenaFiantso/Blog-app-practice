@@ -6,7 +6,7 @@ const HomePage = () => {
     <div className='flex flex-col items-center justify-center'>
       <h1 className='mb-3 text-2xl font-bold'>Home</h1>
       <p className='mb-8'>This is the home page</p>
-      <ul className='flex flex-col text-center gap-5'>
+      <ul className='flex flex-col gap-5 text-center'>
         {blogs.map((blog) => (
           <li key={blog.id}>
             <Link href={`/blog/${blog.id}`} className='hover:underline'>

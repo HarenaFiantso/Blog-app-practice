@@ -1,6 +1,6 @@
+import { blogs } from '@/app/datas/BlogList';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { blogs } from '@/app/datas/BlogList';
 
 const BlogPage = ({ params }: { params: { blogId: number } }) => {
   if (params.blogId > blogs.length) {
