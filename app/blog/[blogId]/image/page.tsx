@@ -1,10 +1,12 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
+import { blogs } from '@/app/datas/BlogList';
 
-const BlogImagePage = ({ params }: { params: { blogId: string } }) => {
-  const imageUrl = `https://picsum.photos/970`;
+const BlogImagePage = ({ params }: { params: { blogId: number } }) => {
+  const randomNumber = Math.round(Math.random() * 1000);
+  const imageUrl = `https://picsum.photos/${randomNumber}`;
 
-  if (parseInt(params.blogId) > 10) {
+  if (params.blogId > blogs.length) {
     notFound();
   }
 
