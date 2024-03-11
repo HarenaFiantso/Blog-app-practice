@@ -1,9 +1,7 @@
 export default function Header() {
-    return (
-        <div className="w-full bg-black border-b border-b-gray-700 text-center py-5">
-            <h1 className="text-2xl font-bold">
-                Header
-            </h1>
-        </div>
-    );
+  return (
+    <div className='w-full border-b border-b-gray-700 bg-black py-5 text-center'>
+      <h1 className='text-2xl font-bold'>Header</h1>
+    </div>
+  );
 }
